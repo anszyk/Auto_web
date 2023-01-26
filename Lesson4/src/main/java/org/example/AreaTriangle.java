@@ -1,14 +1,10 @@
 package org.example;
 
-import java.util.Scanner;
+public class AreaTriangle  {
 
-import static java.lang.Math.sqrt;
-
-public class AreaTriangle {
-
-    private static int a;
-    private static int b;
-    private static int c;
+  /*  public static int a;
+    public static int b;
+    public static int c;
 
     public AreaTriangle(int a, int b, int c) {
         this.a = a;
@@ -25,18 +21,17 @@ public class AreaTriangle {
         System.out.print("Enter c: ");
         c = sc.nextInt();
 
-        AreaTriangle areaTriangle = new AreaTriangle(a, b, c);
+//        AreaTriangle areaTriangle = new AreaTriangle(a, b, c);
 
-        System.out.println(" s = " + areaTriangle.areaOfATriangle());
-    }
 
-    public int areaOfATriangle() {
 
         double p = (a + b + c) * 1 / 2;
         int s = (int) sqrt(p * (p - a) * (p - b) * (p - c));
-        return s;
-
+        System.out.println(" s = " + s);
     }
+*/
+
+    /*
     public int getA() {
         return a;
     }
@@ -47,5 +42,5 @@ public class AreaTriangle {
 
     public int getC() {
         return c;
-    }
+    }*/
 }

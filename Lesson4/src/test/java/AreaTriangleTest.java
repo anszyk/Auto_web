@@ -1,51 +1,38 @@
-import org.example.AreaTriangle;
-import org.example.MyException;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class AreaTriangleTest {
+
+public class AreaTriangleTest extends  AbstractTest{
 
     @Test
     public void positiveTriangleCheckTest() {
-        AreaTriangle areaTriangle = new AreaTriangle(8, 6, 4);
 
-        int a = areaTriangle.getA();
-        int b = areaTriangle.getB();
-        int c = areaTriangle.getC();
-
-        if (a + b > c & a + c > b & b + c > a)
+        if (getA(8) + getB(6) > getC(4) & getA(8) + getC(4) > getB(6) & getB(6) + getC(4) > getA(8))
             System.out.println("Треугольник существует");
         else
             System.out.println("Треугольник не существует");
-
     }
 
     @Test
-    @AfterAll
-    public static void TwoNegativeTriangleCheckTest() throws MyException {
-        AreaTriangle areaTriangle = new AreaTriangle(0, 6, 4);
+//    @AfterAll
+    public void OneNegativeTriangleCheckTest() throws MyException {
 
-        int a = areaTriangle.getA();
-        int b = areaTriangle.getB();
-        int c = areaTriangle.getC();
+        int a = getA(0);
+        int b = getB(6);
+        int c = getC(4);
         int b2 = 2;
-
-        if (Math.pow(a, b2) + Math.pow(b, b2) != Math.pow(c, b2))
+        assertTrue(Math.pow(a, b2) + Math.pow(b, b2) != Math.pow(c, b2));
             throw new MyException("Треугольник не задан");
 
-
     }
-
     @Test
-    @BeforeAll
-    public static void OneNegativeTriangleCheckTest() throws MyException {
-        AreaTriangle areaTriangle = new AreaTriangle(0, 6, 4);
+//    @BeforeAll
+    public void TwoNegativeTriangleCheckTest() throws MyException {
 
-        int a = areaTriangle.getA();
-        int b = areaTriangle.getB();
-        int c = areaTriangle.getC();
+        int a = getA(0);
+        int b = getB(6);
+        int c = getC(4);
 
         if(a <= 0 || b <= 0 || c <= 0) throw new MyException("Проверка не прошла");
 

@@ -29,9 +29,7 @@ public class AreaTriangle  {
         int s = (int) sqrt(p * (p - a) * (p - b) * (p - c));
         System.out.println(" s = " + s);
     }
-*/
 
-    /*
     public int getA() {
         return a;
     }
